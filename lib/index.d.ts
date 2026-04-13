@@ -22,6 +22,9 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     musicLevel: Schema<"HQ" | "SQ" | "RS" | "DA" | "QAI", "HQ" | "SQ" | "RS" | "DA" | "QAI">;
     retryCount: Schema<number, number>;
     retryDelay: Schema<number, number>;
+    sendRetryCount: Schema<number, number>;
+    sendRetryDelay: Schema<number, number>;
+    sendRetryBackoff: Schema<number, number>;
 }> | Schemastery.ObjectS<{
     imageMode: Schema<boolean, boolean>;
     darkMode: Schema<boolean, boolean>;
@@ -53,6 +56,9 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     musicLevel: "HQ" | "SQ" | "RS" | "DA" | "QAI";
     retryCount: number;
     retryDelay: number;
+    sendRetryCount: number;
+    sendRetryDelay: number;
+    sendRetryBackoff: number;
 } & import("cosmokit").Dict & {
     imageMode: boolean;
     darkMode: boolean;
@@ -78,6 +84,9 @@ export interface Config {
     musicLevel: "HQ" | "SQ" | "RS" | "DA" | "QAI";
     retryCount: number;
     retryDelay: number;
+    sendRetryCount: number;
+    sendRetryDelay: number;
+    sendRetryBackoff: number;
     imageMode: boolean;
     darkMode: boolean;
     cardBorderColor: string;
