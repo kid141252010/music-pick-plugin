@@ -28,6 +28,7 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     onebotResponseTimeout: Schema<number, number>;
     onebotDirectUploadThresholdMB: Schema<number, number>;
     onebotStrictRemoteUpload: Schema<boolean, boolean>;
+    onebotRemoteUploadBaseUrl: Schema<string, string>;
     inlineMediaMaxSizeMB: Schema<number, number>;
     oversizeFallbackTip: Schema<string, string>;
 }> | Schemastery.ObjectS<{
@@ -67,6 +68,7 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     onebotResponseTimeout: number;
     onebotDirectUploadThresholdMB: number;
     onebotStrictRemoteUpload: boolean;
+    onebotRemoteUploadBaseUrl: string;
     inlineMediaMaxSizeMB: number;
     oversizeFallbackTip: string;
 } & import("cosmokit").Dict & {
@@ -100,6 +102,7 @@ export interface Config {
     onebotResponseTimeout: number;
     onebotDirectUploadThresholdMB: number;
     onebotStrictRemoteUpload: boolean;
+    onebotRemoteUploadBaseUrl: string;
     inlineMediaMaxSizeMB: number;
     oversizeFallbackTip: string;
     imageMode: boolean;
