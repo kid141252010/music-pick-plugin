@@ -25,6 +25,7 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     sendRetryCount: Schema<number, number>;
     sendRetryDelay: Schema<number, number>;
     sendRetryBackoff: Schema<number, number>;
+    onebotResponseTimeout: Schema<number, number>;
 }> | Schemastery.ObjectS<{
     imageMode: Schema<boolean, boolean>;
     darkMode: Schema<boolean, boolean>;
@@ -59,6 +60,7 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     sendRetryCount: number;
     sendRetryDelay: number;
     sendRetryBackoff: number;
+    onebotResponseTimeout: number;
 } & import("cosmokit").Dict & {
     imageMode: boolean;
     darkMode: boolean;
@@ -87,6 +89,7 @@ export interface Config {
     sendRetryCount: number;
     sendRetryDelay: number;
     sendRetryBackoff: number;
+    onebotResponseTimeout: number;
     imageMode: boolean;
     darkMode: boolean;
     cardBorderColor: string;
