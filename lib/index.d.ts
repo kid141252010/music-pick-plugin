@@ -26,6 +26,10 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     sendRetryDelay: Schema<number, number>;
     sendRetryBackoff: Schema<number, number>;
     onebotResponseTimeout: Schema<number, number>;
+    onebotDirectUploadThresholdMB: Schema<number, number>;
+    onebotStrictRemoteUpload: Schema<boolean, boolean>;
+    inlineMediaMaxSizeMB: Schema<number, number>;
+    oversizeFallbackTip: Schema<string, string>;
 }> | Schemastery.ObjectS<{
     imageMode: Schema<boolean, boolean>;
     darkMode: Schema<boolean, boolean>;
@@ -61,6 +65,10 @@ export declare const Config: Schema<Schemastery.ObjectS<{
     sendRetryDelay: number;
     sendRetryBackoff: number;
     onebotResponseTimeout: number;
+    onebotDirectUploadThresholdMB: number;
+    onebotStrictRemoteUpload: boolean;
+    inlineMediaMaxSizeMB: number;
+    oversizeFallbackTip: string;
 } & import("cosmokit").Dict & {
     imageMode: boolean;
     darkMode: boolean;
@@ -90,6 +98,10 @@ export interface Config {
     sendRetryDelay: number;
     sendRetryBackoff: number;
     onebotResponseTimeout: number;
+    onebotDirectUploadThresholdMB: number;
+    onebotStrictRemoteUpload: boolean;
+    inlineMediaMaxSizeMB: number;
+    oversizeFallbackTip: string;
     imageMode: boolean;
     darkMode: boolean;
     cardBorderColor: string;
