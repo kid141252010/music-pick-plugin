@@ -15,6 +15,7 @@ interface ReturnField {
 export declare const Config: Schema<Schemastery.ObjectS<{
     commandName: Schema<string, string>;
     apilink: Schema<string, string>;
+    neteaseApiLink: Schema<string, string>;
     proxyUrl: Schema<string, string>;
     waitTimeout: Schema<number, number>;
     exitCommand: Schema<string, string>;
@@ -55,6 +56,7 @@ export declare const Config: Schema<Schemastery.ObjectS<{
 }>, {
     commandName: string;
     apilink: string;
+    neteaseApiLink: string;
     proxyUrl: string;
     waitTimeout: number;
     exitCommand: string;
@@ -113,6 +115,7 @@ export interface Config {
     isFigure: boolean;
     loggerInfo: boolean;
     apilink: string;
+    neteaseApiLink: string;
     proxyUrl: string;
 }
 export declare function apply(ctx: Context, config: Config): void;
