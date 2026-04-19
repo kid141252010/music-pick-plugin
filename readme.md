@@ -18,6 +18,7 @@
 - 发送 `点歌 关键词` 时，默认走 MET 源。
 - 发送 `点歌 -163 关键词` 或 `点歌 -wyy 关键词` 时，走网易云源。
 - 网易云源需要在插件配置中额外填写 `neteaseApiLink`。
+- 如需携带账号态请求网易云源，可配置 `neteaseCookie`，插件会仅在网易云 API 请求时通过 `Cookie` 请求头发送。
 - 如果未配置 `neteaseApiLink`，选择网易云源时会提示未配置。
 
 ## 配置示例
@@ -26,5 +27,8 @@
 {
   apilink: 'https://example.com/met',
   neteaseApiLink: 'https://example.com/netease',
+  neteaseCookie: 'MUSIC_U=your_cookie_value',
 }
 ```
+
+`neteaseCookie` 支持填写最小值（如 `MUSIC_U=...`），也支持直接填写完整 Cookie 串（如 `MUSIC_U=...; __csrf=...; NMTID=...`）。
